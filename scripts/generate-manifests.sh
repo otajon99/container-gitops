@@ -45,6 +45,7 @@ for i in $(seq 0 $((STUDENT_COUNT - 1))); do
     USERNAME=$(yq eval ".students[$i].github_username" "$STUDENT_FILE")
     IMAGE=$(yq eval ".students[$i].container_image" "$STUDENT_FILE")
     PORT=$(yq eval ".students[$i].port // 5000" "$STUDENT_FILE")
+    HEALTH_ENDPOINT=$(yq eval ".students[$i].health_endpoint // \"/health\"" "$STUDENT_FILE")
 
     # Skip null entries
     if [ "$NAME" == "null" ] || [ "$USERNAME" == "null" ]; then
@@ -53,8 +54,8 @@ for i in $(seq 0 $((STUDENT_COUNT - 1))); do
 
     echo "Generating resources for: $USERNAME"
 
-    # Add to student list for gallery
-    STUDENT_LIST=$(echo "$STUDENT_LIST" | jq --arg name "$NAME" --arg user "$USERNAME" '. += [{"name": $name, "github_username": $user}]')
+    # Add to student list for gallery (compact JSON)
+    STUDENT_LIST=$(echo "$STUDENT_LIST" | jq -c --arg name "$NAME" --arg user "$USERNAME" '. += [{"name": $name, "github_username": $user}]')
 
     # Generate Deployment
     cat > "$OUTPUT_DIR/student-${USERNAME}-deployment.yaml" <<EOF
@@ -100,13 +101,13 @@ spec:
             cpu: "200m"
         livenessProbe:
           httpGet:
-            path: /health
+            path: ${HEALTH_ENDPOINT}
             port: ${PORT}
           initialDelaySeconds: 10
           periodSeconds: 30
         readinessProbe:
           httpGet:
-            path: /health
+            path: ${HEALTH_ENDPOINT}
             port: ${PORT}
           initialDelaySeconds: 5
           periodSeconds: 10

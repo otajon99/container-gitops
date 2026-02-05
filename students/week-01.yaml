@@ -21,3 +21,9 @@ students:
   #   port: 5000
 
   # Add your submission below this line:
+  - name: "Test Student"
+    github_username: "testuser"
+    container_image: "nginx:alpine"
+    student_endpoint: "/"
+    health_endpoint: "/"
+    port: 80
