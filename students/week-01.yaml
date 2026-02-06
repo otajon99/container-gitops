@@ -24,6 +24,11 @@ students:
       container_image: "ghcr.io/jlgore/container-course-student:latest"
       student_endpoint: "/student"
       health_endpoint: "/health"
+    - name: "Omar Masood"
+      github_username: "omar-masood"
+      container_image: "ghcr.io/omar-masood/container-course-student:v3-student"
+      student_endpoint: "/student"
+      health_endpoint: "/health"   
 
   # Add your submission below this line:
 # Test trigger 1770313044
