@@ -6,6 +6,6 @@ namespace: container-course-week01
 resources:
   - namespace.yaml
   - gallery-configmap.yaml
-  - student-Otajon99-deployment.yaml
   - student-almsid-deployment.yaml
   - student-emmzi55-deployment.yaml
+  - student-otajon99-deployment.yaml

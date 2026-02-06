@@ -2,23 +2,23 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: student-Otajon99
+  name: student-otajon99
   namespace: container-course-week01
   labels:
     app: student-app
-    student: Otajon99
+    student: otajon99
     week: "1"
 spec:
   replicas: 1
   selector:
     matchLabels:
       app: student-app
-      student: Otajon99
+      student: otajon99
   template:
     metadata:
       labels:
         app: student-app
-        student: Otajon99
+        student: otajon99
     spec:
       containers:
       - name: student-app
@@ -30,7 +30,7 @@ spec:
         - name: STUDENT_NAME
           value: "Otajon Burkhonov"
         - name: GITHUB_USERNAME
-          value: "Otajon99"
+          value: "otajon99"
         resources:
           requests:
             memory: "64Mi"
@@ -54,14 +54,14 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: student-Otajon99-svc
+  name: student-otajon99-svc
   namespace: container-course-week01
   labels:
-    student: Otajon99
+    student: otajon99
 spec:
   selector:
     app: student-app
-    student: Otajon99
+    student: otajon99
   ports:
   - port: 80
     targetPort: 5000
