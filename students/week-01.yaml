@@ -48,6 +48,11 @@ students:
     container_image: "ghcr.io/zahmadi57/container-course-student:v3-student"
     student_endpoint: "/student"
     health_endpoint: "/health"
-    
+
+  - name: "Wais Satari"
+    github_username: "waissat"
+    container_image: "ghcr.io/waissat/container-course-student:3-student"
+    student_endpoint: "/student"
+    health_endpoint: "/health"
 
   # Add your submission below this line:
