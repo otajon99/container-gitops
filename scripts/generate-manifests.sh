@@ -58,7 +58,7 @@ for i in $(seq 0 $((STUDENT_COUNT - 1))); do
     echo "Generating resources for: $USERNAME"
 
     # Add to student list for gallery (compact JSON)
-    STUDENT_LIST=$(echo "$STUDENT_LIST" | jq -c --arg name "$NAME" --arg user "$USERNAME" '. += [{"name": $name, "github_username": $user}]')
+    STUDENT_LIST=$(echo "$STUDENT_LIST" | jq -c --arg name "$NAME" --arg user "$USERNAME" --arg health "$HEALTH_ENDPOINT" '. += [{"name": $name, "github_username": $user, "health_endpoint": $health}]')
 
     # Generate Deployment
     cat > "$OUTPUT_DIR/student-${USERNAME_LOWER}-deployment.yaml" <<EOF
