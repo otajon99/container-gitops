@@ -55,4 +55,10 @@ students:
     student_endpoint: "/student"
     health_endpoint: "/health"
 
+  - name: "Joseph Blackie"
+    github_username: "joedomblack1019"
+    container_image: "ghcr.io/joedomblack1019/container-course-student:v4-student"
+    student_endpoint: "/student"
+    health_endpoint: "/health"
+
   # Add your submission below this line:
