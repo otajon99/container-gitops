@@ -33,7 +33,7 @@ students:
 
   - name: "Emma Zinyak"
     github_username: "emmzi55"
-    container_image: "ghcr.io/emmzi55/container-course-student:3-student"
+    container_image: "ghcr.io/emmzi55/container-course-student:latest"
     student_endpoint: "/student"
     health_endpoint: "/health"
   # Add your submission below this line:
