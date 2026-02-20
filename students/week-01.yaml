@@ -25,11 +25,11 @@ students:
   #   health_endpoint: "/health"
 
 
-    - name: "Otajon Burkhonov"
-      github_username: "Otajon99"
-      container_image: "ghcr.io/otajon99/container-course-student:v3-student"
-      student_endpoint: "/student"
-      health_endpoint: "/health"
+  - name: "Otajon Burkhonov"
+    github_username: "Otajon99"
+    container_image: "ghcr.io/otajon99/container-course-student:v3-student"
+    student_endpoint: "/student"
+    health_endpoint: "/health"
 
   - name: "Emma Zinyak"
     github_username: "emmzi55"
