@@ -2,35 +2,35 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: student-emmzi55
+  name: student-joedomblack1019
   namespace: container-course-week01
   labels:
     app: student-app
-    student: emmzi55
+    student: joedomblack1019
     week: "1"
 spec:
   replicas: 1
   selector:
     matchLabels:
       app: student-app
-      student: emmzi55
+      student: joedomblack1019
   template:
     metadata:
       labels:
         app: student-app
-        student: emmzi55
+        student: joedomblack1019
     spec:
       containers:
       - name: student-app
-        image: ghcr.io/emmzi55/container-course-student:3-student
+        image: ghcr.io/joedomblack1019/container-course-student:v4-student
         ports:
         - containerPort: 5000
           name: http
         env:
         - name: STUDENT_NAME
-          value: "Emma Zinyak"
+          value: "Joseph Blackie"
         - name: GITHUB_USERNAME
-          value: "emmzi55"
+          value: "joedomblack1019"
         resources:
           requests:
             memory: "64Mi"
@@ -54,14 +54,14 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: student-emmzi55-svc
+  name: student-joedomblack1019-svc
   namespace: container-course-week01
   labels:
-    student: emmzi55
+    student: joedomblack1019
 spec:
   selector:
     app: student-app
-    student: emmzi55
+    student: joedomblack1019
   ports:
   - port: 80
     targetPort: 5000
