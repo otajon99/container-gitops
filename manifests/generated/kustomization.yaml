@@ -9,8 +9,5 @@ resources:
   - student-almsid-deployment.yaml
   - student-emmzi55-deployment.yaml
   - student-jlgore-deployment.yaml
-  - student-joedomblack1019-deployment.yaml
   - student-omar-masood-deployment.yaml
   - student-otajon99-deployment.yaml
-  - student-waissat-deployment.yaml
-  - student-zahmadi57-deployment.yaml

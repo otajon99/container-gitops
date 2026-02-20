@@ -22,7 +22,7 @@ spec:
     spec:
       containers:
       - name: student-app
-        image: ghcr.io/emmzi55/container-course-student:3-student
+        image: ghcr.io/emmzi55/container-course-student:latest
         ports:
         - containerPort: 5000
           name: http

@@ -18,6 +18,6 @@ data:
         # API endpoint that returns student data
         location /api/students {
             default_type application/json;
-            return 200 '{"students": [{"name":"Jared Gore","github_username":"jlgore","health_endpoint":"/health"},{"name":"Omar Masood","github_username":"omar-masood","health_endpoint":"/health"},{"name":"Mohammad Siddiqi","github_username":"almsid","health_endpoint":"/health"},{"name":"Otajon Burkhonov","github_username":"otajon99","health_endpoint":"/health"},{"name":"Emma Zinyak","github_username":"emmzi55","health_endpoint":"/health"},{"name":"zia ahmadi","github_username":"zahmadi57","health_endpoint":"/health"},{"name":"Wais Satari","github_username":"waissat","health_endpoint":"/health"},{"name":"Joseph Blackie","github_username":"joedomblack1019","health_endpoint":"/health"}]}';
+            return 200 '{"students": [{"name":"Jared Gore","github_username":"jlgore","health_endpoint":"/health"},{"name":"Omar Masood","github_username":"omar-masood","health_endpoint":"/health"},{"name":"Mohammad Siddiqi","github_username":"almsid","health_endpoint":"/health"},{"name":"Otajon Burkhonov","github_username":"otajon99","health_endpoint":"/health"},{"name":"Emma Zinyak","github_username":"emmzi55","health_endpoint":"/health"}]}';
         }
     }
