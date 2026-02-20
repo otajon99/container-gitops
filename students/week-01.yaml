@@ -30,6 +30,12 @@ students:
     student_endpoint: "/student"
     health_endpoint: "/health"
     port: 5000
+# - name: "Jared Gore"
+  #   github_username: "jlgore"
+  #   container_image: "ghcr.io/jlgore/container-course-student:latest"
+  #   student_endpoint: "/student"
+  #   health_endpoint: "/health"
+
 
   - name: "Otajon Burkhonov"
     github_username: "otajon99"
@@ -39,26 +45,7 @@ students:
 
   - name: "Emma Zinyak"
     github_username: "emmzi55"
-    container_image: "ghcr.io/emmzi55/container-course-student:3-student"
+    container_image: "ghcr.io/emmzi55/container-course-student:latest"
     student_endpoint: "/student"
     health_endpoint: "/health"
-    
-  - name: "zia ahmadi"
-    github_username: "zahmadi57"
-    container_image: "ghcr.io/zahmadi57/container-course-student:v3-student"
-    student_endpoint: "/student"
-    health_endpoint: "/health"
-
-  - name: "Wais Satari"
-    github_username: "waissat"
-    container_image: "ghcr.io/waissat/container-course-student:3-student"
-    student_endpoint: "/student"
-    health_endpoint: "/health"
-
-  - name: "Joseph Blackie"
-    github_username: "joedomblack1019"
-    container_image: "ghcr.io/joedomblack1019/container-course-student:v4-student"
-    student_endpoint: "/student"
-    health_endpoint: "/health"
-
   # Add your submission below this line:
